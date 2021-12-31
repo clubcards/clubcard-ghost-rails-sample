@@ -81,3 +81,5 @@ gem "rack-timeout", "~> 0.6.0"
 gem 'net-smtp', require: false
 gem 'net-imap', require: false
 gem 'net-pop', require: false
+
+gem "dotenv-rails", "~> 2.7", groups: [:development, :test]
