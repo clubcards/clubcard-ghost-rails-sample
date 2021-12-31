@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.0"
 
+gem "dotenv-rails", "~> 2.7", groups: [:development, :test]
+
 # Use main development branch of Rails
 gem "rails", github: "rails/rails", branch: "main"
 
@@ -81,5 +83,3 @@ gem "rack-timeout", "~> 0.6.0"
 gem 'net-smtp', require: false
 gem 'net-imap', require: false
 gem 'net-pop', require: false
-
-gem "dotenv-rails", "~> 2.7", groups: [:development, :test]
