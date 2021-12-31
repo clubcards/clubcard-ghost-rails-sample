@@ -46,18 +46,19 @@
             </div>
           </div>
 
-          <div>
+          <div data-controller="quicklink">
             <label for="contract_address" class="block text-sm font-medium text-gray-700">
               Contract address
             </label>
             <div class="mt-1">
-              <%= f.text_field :contract_address, value: ENV["CONTRACT_ADDRESS"], class: "appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" %>
+              <%= f.text_field :contract_address, value: ENV["CONTRACT_ADDRESS"], class: "appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm", data: { quicklink_target: "field"} %>
             </div>
             <p class="mt-2 text-sm text-gray-500" id="contract-address--description">Enter a <code>0x1234...</code> contract address to require this NFT on the next step. Leave blank for to allow any wallet to continue.</p>
             <p class="mt-2 text-sm text-gray-500">
               <b>Try:</b><br>
-              <a href="https://rareblocks.xyz" target="_blank" rel="noreferrer">Rareblocks Access Pass</a> - <code>0x1bb191e56206e11b14117711C333CC18b9861262</code><br>
-              <a href="https://veefriends.com" target="_blank" rel="noreferrer">VeeFriends</a> - <code>0xa3AEe8BcE55BEeA1951EF834b99f3Ac60d1ABeeB</code><br>
+              <a href="https://rareblocks.xyz" target="_blank" rel="noreferrer">No Address</a> - <code class="cursor-pointer" data-quicklink-target="content" data-action="click->quicklink#putValue" data-quicklink-value-param="">clear address</code><br>
+              <a href="https://rareblocks.xyz" target="_blank" rel="noreferrer">Rareblocks Access Pass</a> - <code class="cursor-pointer" data-quicklink-target="content" data-action="click->quicklink#putValue" data-quicklink-value-param="0x1bb191e56206e11b14117711C333CC18b9861262">0x1bb191e56206e11b14117711C333CC18b9861262</code><br>
+              <a href="https://veefriends.com" target="_blank" rel="noreferrer">VeeFriends</a> - <code class="cursor-pointer" data-quicklink-target="content" data-action="click->quicklink#putValue" data-quicklink-value-param="0xa3AEe8BcE55BEeA1951EF834b99f3Ac60d1ABeeB">0xa3AEe8BcE55BEeA1951EF834b99f3Ac60d1ABeeB</code><br>
             </p>
           </div>
 
