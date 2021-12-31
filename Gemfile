@@ -77,3 +77,7 @@ end
 gem "http", "~> 5.0"
 
 gem "rack-timeout", "~> 0.6.0"
+
+gem 'net-smtp', require: false
+gem 'net-imap', require: false
+gem 'net-pop', require: false
