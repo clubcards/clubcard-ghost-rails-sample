@@ -75,3 +75,5 @@ group :test do
 end
 
 gem "http", "~> 5.0"
+
+gem "rack-timeout", "~> 0.6.0"
